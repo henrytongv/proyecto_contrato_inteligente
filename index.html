@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahorro HBAR — Timelock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Ahorro en HBAR con fecha de desbloqueo</h1>
+    <p class="subtitle">
+      Los depósitos quedan bloqueados en un smart contract hasta el
+      <strong>10 de marzo de 2028</strong>. Solo la cuenta beneficiaria
+      <code id="beneficiary-label"></code> podrá retirarlos.
+    </p>
+
+    <section class="wallet">
+      <button id="btn-connect">Conectar HashPack</button>
+      <span id="account-label" class="muted">Billetera no conectada</span>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <span>Balance del contrato</span>
+        <strong id="balance">—</strong>
+      </div>
+      <div class="row">
+        <span>Fecha de desbloqueo</span>
+        <strong id="unlock-date">—</strong>
+      </div>
+      <div class="row">
+        <span>Tiempo restante</span>
+        <strong id="countdown">—</strong>
+      </div>
+      <div class="row">
+        <span>Contrato</span>
+        <a id="contract-link" href="#" target="_blank" rel="noopener">ver en HashScan</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Depositar</h2>
+      <div class="deposit-form">
+        <input id="amount" type="number" min="0" step="0.00000001" placeholder="Cantidad en HBAR" />
+        <button id="btn-deposit" disabled>Depositar</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Retiro</h2>
+      <p class="muted" id="withdraw-hint">
+        Disponible para la beneficiaria a partir de la fecha de desbloqueo.
+      </p>
+      <button id="btn-withdraw" disabled>Retirar todo el balance</button>
+    </section>
+
+    <p id="status" class="status"></p>
+  </main>
+
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

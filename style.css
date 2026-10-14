@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0f1220;
+  color: #e8eaf2;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #1a1e33;
+  border: 1px solid #2a3054;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 560px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.subtitle {
+  color: #aab0d0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+code {
+  background: #262b47;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.wallet {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+button {
+  background: #4f6df5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #3f5ce0;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.panel {
+  background: #141830;
+  border: 1px solid #2a3054;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.deposit-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+input {
+  flex: 1;
+  background: #0f1220;
+  border: 1px solid #2a3054;
+  border-radius: 8px;
+  color: #e8eaf2;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+.muted {
+  color: #8890b8;
+  font-size: 0.85rem;
+}
+
+.status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.status.ok {
+  color: #5fd68b;
+}
+
+.status.error {
+  color: #f57a7a;
+}
+
+a {
+  color: #7ea0ff;
+}
